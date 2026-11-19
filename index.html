@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 工具导航 · 发现好用的 AI 工具</title>
+<meta name="description" content="面向中文用户的 AI 工具发现与官网导流平台。按分类浏览、搜索与收藏，快速找到合适的 AI 工具。">
+<meta name="keywords" content="AI工具,人工智能,AI导航,AI写作,AI绘画,AI编程">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============ 顶部导航 ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#/" data-link>
+      <span class="brand-mark">AI</span>
+      <span class="brand-name">工具导航</span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#/" data-link data-nav="home">首页</a>
+      <a href="#/categories" data-link data-nav="categories">分类</a>
+      <a href="#/favorites" data-link data-nav="favorites">我的收藏 <span class="nav-badge" id="favCount" hidden>0</span></a>
+      <a href="#/submit" data-link data-nav="submit">提交工具</a>
+      <a href="#/business" data-link data-nav="business">商务合作</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-ghost btn-sm" id="themeHint" title="深色主题">🌙</button>
+      <a class="btn btn-outline btn-sm" href="#/admin" data-link>管理后台</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="菜单">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 全局搜索条（非首页显示） ============ -->
+<div class="sub-search" id="subSearch" hidden>
+  <div class="container">
+    <form class="search-box search-box-sm" id="subSearchForm">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="subSearchInput" placeholder="搜索工具名称、简介或标签…" autocomplete="off">
+      <button type="submit" class="btn btn-primary">搜索</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ 应用内容区（由 JS 渲染） ============ -->
+<main id="app" class="app-main"></main>
+
+<!-- ============ 页脚 ============ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-about">
+      <div class="brand">
+        <span class="brand-mark">AI</span><span class="brand-name">工具导航</span>
+      </div>
+      <p id="footerDesc">发现好用的 AI 工具，一站直达官网。</p>
+    </div>
+    <div class="footer-links">
+      <div><h4>浏览</h4><a href="#/categories" data-link>全部分类</a><a href="#/favorites" data-link>我的收藏</a></div>
+      <div><h4>参与</h4><a href="#/submit" data-link>提交工具</a><a href="#/business" data-link>商务合作</a></div>
+      <div><h4>管理</h4><a href="#/admin" data-link>管理后台</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 AI 工具导航 · 收藏保存在当前浏览器</span>
+    <span>本站广告均带「广告 / 赞助」标识，点击在新标签页打开</span>
+  </div>
+</footer>
+
+<!-- ============ 全局提示 ============ -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- ============ 脚本（经典脚本，兼容 file:// 直接打开） ============ -->
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
